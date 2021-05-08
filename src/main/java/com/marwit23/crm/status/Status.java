@@ -1,8 +1,8 @@
-package com.marwit23.crm.actions;
+package com.marwit23.crm.status;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.marwit23.crm._constants.ActionType;
+import com.marwit23.crm._constants.StatusType;
 import com.marwit23.crm.project.Project;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,21 +18,21 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Action {
+public class Status {
 
     //TODO: Task instead of Action???
     //TODO: Task result (e.g. no pickup), date?
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int actionId;
+    private int statusId;
 
     @Enumerated(EnumType.STRING)
-    private ActionType actionType;
+    private StatusType statusType;
 
     @CreatedDate
     @JsonFormat(pattern = "dd-MM-yyyy")
-    private LocalDate actionDate;
+    private LocalDate statusDate;
 
     @ManyToOne
     @JoinColumn(name = "actions")

@@ -1,6 +1,7 @@
 package com.marwit23.crm.company;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.marwit23.crm._constants.CompanyIndustry;
 import com.marwit23.crm._constants.CompanyType;
 import com.marwit23.crm.person.Person;
 import com.marwit23.crm.project.Project;
@@ -27,7 +28,8 @@ public class Company {
     @Enumerated(EnumType.STRING)
     private CompanyType companyType;
 
-    // TODO: Company Industry
+    @Enumerated(EnumType.STRING)
+    private CompanyIndustry companyIndustry;
 
     @OneToMany(mappedBy = "company")
     private List<Person> persons;
