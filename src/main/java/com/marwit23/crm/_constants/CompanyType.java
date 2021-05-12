@@ -1,8 +1,9 @@
 package com.marwit23.crm._constants;
 
 public enum CompanyType {
-    SUPPLIER,
     CUSTOMER,
+    NOT_SURE,
+    SUPPLIER,
     SERVICES,
     OTHER
 }

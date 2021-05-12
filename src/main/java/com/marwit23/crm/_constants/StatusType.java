@@ -8,5 +8,6 @@ public enum StatusType {
     FOLLOW_UP,
     MEETING_SET,
     ORDER_OPEN,
-    ORDER_CLOSED
+    ORDER_CLOSED,
+    KILLED
 }

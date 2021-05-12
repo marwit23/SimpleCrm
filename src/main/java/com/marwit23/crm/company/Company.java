@@ -20,6 +20,12 @@ import java.util.List;
 @Entity
 public class Company {
 
+    //TODO: company / project source (old, incoming, emails, namecards, internet)
+    //TODO: company prospect (not_interested, neutral, interested, opened_project)
+    // Może tutaj dodać telefony, albo do osoby
+    // Boolean czy touched
+    // Company notes
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int companyId;
@@ -33,8 +39,5 @@ public class Company {
 
     @OneToMany(mappedBy = "company")
     private List<Person> persons;
-
-    @OneToMany(mappedBy = "customer")
-    private List<Project> projects;
 
 }
